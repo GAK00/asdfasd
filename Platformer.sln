@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platformer", "Platformer\Platformer.csproj", "{7D91A79A-4EEA-4EE9-BA81-27F79EBD2F60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D91A79A-4EEA-4EE9-BA81-27F79EBD2F60}.Debug|x86.ActiveCfg = Debug|x86
+		{7D91A79A-4EEA-4EE9-BA81-27F79EBD2F60}.Debug|x86.Build.0 = Debug|x86
+		{7D91A79A-4EEA-4EE9-BA81-27F79EBD2F60}.Release|x86.ActiveCfg = Release|x86
+		{7D91A79A-4EEA-4EE9-BA81-27F79EBD2F60}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal

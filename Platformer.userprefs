@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{7D91A79A-4EEA-4EE9-BA81-27F79EBD2F60}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Platformer/Platformer/Player.cs">
+    <Files>
+      <File FileName="Platformer/Platformer/Program.cs" Line="27" Column="29" />
+      <File FileName="Platformer/Platformer/AnimationPlayer.cs" Line="93" Column="101" />
+      <File FileName="Platformer/Platformer/Animation.cs" Line="67" Column="43" />
+      <File FileName="Platformer/Platformer/Enemy.cs" Line="104" Column="107" />
+      <File FileName="Platformer/Platformer/Player.cs" Line="136" Column="107" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Platformer PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
