@@ -72,7 +72,6 @@ namespace Platformer
         // Constants for controlling vertical movement
         private const float MaxJumpTime = 0.35f;
         private const float JumpLaunchVelocity = -3500.0f;
-        private const float GravityAcceleration = 3400.0f;
         private const float MaxFallSpeed = 550.0f;
         private const float JumpControlPower = 0.14f; 
 
@@ -97,8 +96,6 @@ namespace Platformer
 
         // Jumping state
         private bool isJumping;
-        private bool wasJumping;
-        private float jumpTime;
 
         private Rectangle localBounds;
         /// <summary>
@@ -250,7 +247,6 @@ namespace Platformer
             // Base velocity is a combination of horizontal movement control and
             // acceleration downward due to gravity.
             velocity.X += movement * MoveAcceleration * elapsed;
-            velocity.Y = MathHelper.Clamp(velocity.Y + GravityAcceleration * elapsed, -MaxFallSpeed, MaxFallSpeed);
 
             velocity.Y = DoJump(velocity.Y, gameTime);
 
@@ -300,34 +296,14 @@ namespace Platformer
             // If the player wants to jump
             if (isJumping)
             {
-                // Begin or continue a jump
-                if ((!wasJumping && IsOnGround) || jumpTime > 0.0f)
-                {
-                    if (jumpTime == 0.0f)
-                        jumpSound.Play();
-
-                    jumpTime += (float)gameTime.ElapsedGameTime.TotalSeconds;
-                    sprite.PlayAnimation(jumpAnimation);
-                }
-
-                // If we are in the ascent of the jump
-                if (0.0f < jumpTime && jumpTime <= MaxJumpTime)
-                {
-                    // Fully override the vertical velocity with a power curve that gives players more control over the top of the jump
-                    velocityY = JumpLaunchVelocity * (1.0f - (float)Math.Pow(jumpTime / MaxJumpTime, JumpControlPower));
-                }
-                else
-                {
-                    // Reached the apex of the jump
-                    jumpTime = 0.0f;
-                }
+                velocityY = 0;
+                position.Y -= 10;
+                isJumping = false;
             }
             else
             {
-                // Continues not jumping or cancels a jump in progress
-                jumpTime = 0.0f;
+                velocityY = 100;
             }
-            wasJumping = isJumping;
 
             return velocityY;
         }
